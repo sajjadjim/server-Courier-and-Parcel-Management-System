@@ -28,10 +28,9 @@ server/
 ├── index.js            # Main entry point
 └── .env                # Environment variables (Not committed)
 
+```
 
-
-
-##  🛠️ Setup & Installation
+#  🛠️ Setup & Installation
 1. Clone the repository
 Bash
 
