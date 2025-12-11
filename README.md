@@ -31,19 +31,21 @@ server/
 
 
 
-🛠️ Setup & Installation
+##  🛠️ Setup & Installation
 1. Clone the repository
 Bash
 
 git clone [https://github.com/sajjadjim/server-Courier-and-Parcel-Management-System.git](https://github.com/sajjadjim/server-Courier-and-Parcel-Management-System.git)
 cd server-Courier-and-Parcel-Management-System
 
-2. Install Dependencies
+ ## 2. Install Dependencies
 Bash
 
 npm install
 
-3. Environment Variables
+---
+
+##  3. Environment Variables
 Create a file named .env in the root folder and add the following keys.
 
 Important: Never commit this file to GitHub!
@@ -52,6 +54,10 @@ Code snippet
 
 # Server Port
 PORT=3000
+
+
+---
+
 
 # MongoDB Credentials
 Currier_and_Parcel_Management_Admin=your_db_username
@@ -83,7 +89,9 @@ PATCH /users/:email - Update profile (Name, Photo, Phone, Address)
 
 GET /users/:email/role - Check if user is Admin, Rider, or User
 
-📦 Parcels (/parcels)
+---
+
+## 📦 Parcels (/parcels)
 POST /parcels - Book a new parcel
 
 GET /parcels - Get parcels (Filter by email or status)
@@ -92,6 +100,8 @@ PATCH /parcels/:id/assign - Assign a rider to a parcel
 
 PATCH /parcels/:id/status - Update delivery status (On the way / Delivered)
 
+---
+
 🛵 Riders (/riders)
 GET /riders/active - Get list of approved riders
 
@@ -99,12 +109,16 @@ GET /riders/tasks - Get pending deliveries for a specific rider
 
 POST /riders - Register as a rider
 
+---
+
 💳 Payments (/payments)
 POST /payments/create-payment-intent - Generate Stripe Client Secret
 
 POST /payments - Save payment history and mark parcel as paid
 
 GET /payments - Get payment history for a user
+
+---
 
 🛡️ Security Features
 verifyTokenFB: Middleware that intercepts requests to verify the Firebase ID Token.
